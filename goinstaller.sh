@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GOVERSION=1.12.5
+GOVERSION=1.13.4
 
 GOROOT="$HOME/go"
 
