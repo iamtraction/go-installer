@@ -1,6 +1,11 @@
 #!/bin/bash
 
-GOVERSION=1.13.4
+GOVERSION=$1
+
+if [[ -z $GOVERSION ]]; then
+  echo "Please specify the version of Go you want to install."
+  exit 1
+fi
 
 GOROOT="$HOME/go"
 
