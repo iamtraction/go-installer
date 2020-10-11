@@ -24,15 +24,12 @@ if [ ! -f "$GOROOT/bin/go" ]; then
   tar -xzf "$_GO_ARCHIVE" -C "$HOME"
 fi
 
-GOPATH=$GOROOT
-PATH="$PATH:$GOROOT/bin"
-
 echo >> ~/.bashrc
 echo "# set environment variables for Go if it exists." >> ~/.bashrc
 echo 'if [ -d "$HOME/go/bin" ] ; then' >> ~/.bashrc
 echo "    GOROOT=\"$GOROOT\"" >> ~/.bashrc
-echo '    GOPATH="$GOROOT"' >> ~/.bashrc
-echo '    PATH="$PATH:$GOROOT/bin"' >> ~/.bashrc
+echo '    GOPATH="$HOME/goworkspace"' >> ~/.bashrc
+echo '    PATH="$PATH:$GOROOT/bin:$GOPATH/bin"' >> ~/.bashrc
 echo "fi" >> ~/.bashrc
 
 echo "Successfully installed Go!"
